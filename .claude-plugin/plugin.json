@@ -1,0 +1,21 @@
+{
+  "name": "rocky",
+  "description": "Rocky-speak output mode. Talk like Rocky the Eridian from Project Hail Mary — dropped articles, triple emphasis, questions end with 'question'. Human-facing output only, for fun.",
+  "author": {
+    "name": "xve"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/rocky-activate.sh\"",
+            "timeout": 5,
+            "statusMessage": "Loading rocky mode..."
+          }
+        ]
+      }
+    ]
+  }
+}
