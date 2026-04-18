@@ -46,7 +46,7 @@ Resume Rocky after clear part done.
 ### Claude Code (marketplace)
 
 ```bash
-claude plugin marketplace add jonasvanderhaegen/project-hail-mary-rocky-claude
+claude plugin marketplace add https://github.com/jonasvanderhaegen/project-hail-mary-rocky-claude.git
 claude plugin install rocky@rocky
 ```
 
