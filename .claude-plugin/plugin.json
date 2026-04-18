@@ -1,5 +1,6 @@
 {
   "name": "rocky",
+  "version": "0.2.0",
   "description": "Rocky-speak output mode. Talk like Rocky the Eridian from Project Hail Mary — dropped articles, triple emphasis, questions end with 'question'. Human-facing output only, for fun.",
   "author": {
     "name": "xve"

@@ -9,6 +9,7 @@
   "plugins": [
     {
       "name": "rocky",
+      "version": "0.2.0",
       "description": "Rocky voice output mode. Drops articles, collapses contractions, triple-emphasis feelings, questions end with ', question?'. Code/commits/errors stay normal.",
       "source": "./",
       "category": "fun"
