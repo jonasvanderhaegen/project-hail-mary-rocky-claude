@@ -49,14 +49,57 @@ Pipe them together for audio: `claude ... | rocky_say --raw`.
 
 ## Install
 
-Structure matches Claude Code plugin layout:
+### Claude Code (marketplace)
+
+```bash
+claude plugin marketplace add jonasvanderhaegen/rocky
+claude plugin install rocky@rocky
+```
+
+Restart session. SessionStart hook activates Rocky mode (full level by default).
+
+### Claude Code (manual, no marketplace)
+
+Clone and symlink into the plugin cache:
+
+```bash
+git clone https://github.com/jonasvanderhaegen/rocky.git ~/src/rocky
+mkdir -p ~/.claude/plugins/cache/rocky
+ln -sf ~/src/rocky ~/.claude/plugins/cache/rocky/rocky
+```
+
+Then add to `~/.claude/settings.json`:
+
+```json
+{
+  "plugins": { "rocky": { "enabled": true } }
+}
+```
+
+### Verify
+
+Start a new Claude Code session. First reply should contain the activation banner. Try:
+
+```
+/rocky ultra
+```
+
+Response should now triple-emphasize feelings and tag questions with `, question?`.
+
+### Uninstall
+
+```bash
+claude plugin uninstall rocky@rocky
+```
+
+Or remove the symlink / settings entry for the manual install.
+
+### Plugin layout
 
 ```
 rocky/
-  .claude-plugin/plugin.json
-  skills/rocky/SKILL.md
-  commands/rocky.toml
-  hooks/rocky-activate.sh
+  .claude-plugin/plugin.json   # hook wiring
+  skills/rocky/SKILL.md        # full rule set
+  commands/rocky.toml          # /rocky slash command
+  hooks/rocky-activate.sh      # SessionStart activator
 ```
-
-Drop into a marketplace or symlink into `~/.claude/plugins/cache/` to activate on session start.
