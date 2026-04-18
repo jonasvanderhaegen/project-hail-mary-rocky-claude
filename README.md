@@ -41,12 +41,6 @@ NEVER apply Rocky transform to:
 
 Resume Rocky after clear part done.
 
-## Relation to `rocky_say`
-
-The voice-text rules here are a **subset** of the transform in [`rocky_say`](https://gist.github.com/pedramamini/fa5f6ef99dae79add220188419230642)'s Python `rocky_transform()`. `rocky_say` also synthesizes audio via XTTS/YourTTS voice cloning — this plugin does text only, applied to Claude's responses.
-
-Pipe them together for audio: `claude ... | rocky_say --raw`.
-
 ## Install
 
 ### Claude Code (marketplace)
