@@ -52,7 +52,7 @@ Pipe them together for audio: `claude ... | rocky_say --raw`.
 ### Claude Code (marketplace)
 
 ```bash
-claude plugin marketplace add jonasvanderhaegen/rocky
+claude plugin marketplace add jonasvanderhaegen/project-hail-mary-rocky-claude
 claude plugin install rocky@rocky
 ```
 
@@ -63,7 +63,7 @@ Restart session. SessionStart hook activates Rocky mode (full level by default).
 Clone and symlink into the plugin cache:
 
 ```bash
-git clone https://github.com/jonasvanderhaegen/rocky.git ~/src/rocky
+git clone https://github.com/jonasvanderhaegen/project-hail-mary-rocky-claude.git ~/src/rocky
 mkdir -p ~/.claude/plugins/cache/rocky
 ln -sf ~/src/rocky ~/.claude/plugins/cache/rocky/rocky
 ```
